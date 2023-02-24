@@ -37,11 +37,11 @@ namespace form3_guida
             p[dim].prezzo = float.Parse(prezzo.Text);
             dim++;
             visualizza(p);
-           
+
         }
         public string prodString(prodotto p)
         {
-            return "Nome:"+p.nome+" prezzo:"+p.prezzo.ToString();
+            return "Nome: " + p.nome + " prezzo: " + p.prezzo.ToString();
         }
         public void visualizza(prodotto[] pp)
         {
@@ -50,7 +50,35 @@ namespace form3_guida
             {
                 listView1.Items.Add(prodString(p[i]));
             }
-            
+
         }
+
+        //funzione cancella e sostituisci
+
+        public void Cancella(prodotto[] pp)
+        {
+
+        }
+
+        private void nuovonome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nuovoprezzo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            p[dim].nome = nuovonome.Text;
+            p[dim].prezzo = float.Parse(nuovoprezzo.Text);
+            dim++;
+            visualizza(p);
+
+        }
+    
     }
 }

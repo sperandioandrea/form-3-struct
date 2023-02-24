@@ -34,6 +34,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.nuovonome = new System.Windows.Forms.TextBox();
+            this.nuovoprezzo = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // nome
@@ -70,29 +75,83 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(47, 221);
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(44, 143);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
             this.button1.Text = "salva";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(311, 19);
+            this.listView1.Location = new System.Drawing.Point(329, 37);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(261, 376);
+            this.listView1.Size = new System.Drawing.Size(271, 376);
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.List;
+            // 
+            // nuovonome
+            // 
+            this.nuovonome.Location = new System.Drawing.Point(44, 263);
+            this.nuovonome.Name = "nuovonome";
+            this.nuovonome.Size = new System.Drawing.Size(100, 20);
+            this.nuovonome.TabIndex = 6;
+            this.nuovonome.TextChanged += new System.EventHandler(this.nuovonome_TextChanged);
+            // 
+            // nuovoprezzo
+            // 
+            this.nuovoprezzo.Location = new System.Drawing.Point(171, 262);
+            this.nuovoprezzo.Name = "nuovoprezzo";
+            this.nuovoprezzo.Size = new System.Drawing.Size(100, 20);
+            this.nuovoprezzo.TabIndex = 7;
+            this.nuovoprezzo.TextChanged += new System.EventHandler(this.nuovoprezzo_TextChanged);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button2.Location = new System.Drawing.Point(44, 313);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(72, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "salva";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(41, 243);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Nome aggiornato";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(171, 243);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(92, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Prezzo aggiornato";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.nuovoprezzo);
+            this.Controls.Add(this.nuovonome);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
@@ -115,6 +174,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.TextBox nuovonome;
+        private System.Windows.Forms.TextBox nuovoprezzo;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
