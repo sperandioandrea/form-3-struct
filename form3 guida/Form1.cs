@@ -72,13 +72,33 @@ namespace form3_guida
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            p[dim].nome = nuovonome.Text;
-            p[dim].prezzo = float.Parse(nuovoprezzo.Text);
-            dim++;
+            Modifica(p);
             visualizza(p);
+        }
+       
+        //funzione ricerca elemento
+
+        public void Modifica(prodotto[] pp)
+        {
+            for (int i = 0; i < dim; i++)
+            {
+                if (p[i].nome == textBox1.Text)
+                {
+                    p[i].nome = nuovonome.Text;
+                    p[i].prezzo = float.Parse(nuovoprezzo.Text);
+                }
+            }
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
-    
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
