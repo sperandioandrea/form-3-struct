@@ -25,24 +25,14 @@ namespace form3_guida
             p = new prodotto[100];
             dim = 0;
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            p[dim].nome = nome.Text;
-            p[dim].prezzo = float.Parse(prezzo.Text);
-            dim++;
-            visualizza(p);
 
-        }
-        public string prodString(prodotto p)
-        {
-            return "Nome: " + p.nome + " prezzo: " + p.prezzo.ToString();
-        }
+        
+        //funzione visualizza: fa stampare nella lista il nome e prezzo del prodotto
         public void visualizza(prodotto[] pp)
         {
             listView1.Items.Clear();
@@ -52,30 +42,26 @@ namespace form3_guida
             }
 
         }
-
-        //funzione cancella e sostituisci
-
-        public void Cancella(prodotto[] pp)
+        public string prodString(prodotto p)
         {
-
+            return "Nome: " + p.nome + " prezzo: " + p.prezzo.ToString();
         }
-
-        private void nuovonome_TextChanged(object sender, EventArgs e)
+        //bottone per far inserire i prodotti e prezzi
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void nuovoprezzo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Modifica(p);
+            p[dim].nome = nome.Text;
+            p[dim].prezzo = float.Parse(prezzo.Text);
+            dim++;
             visualizza(p);
+
         }
-       
+        //lista dove visualizzare i prodotti e il prezzo
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
         //funzione ricerca elemento
 
         public void Modifica(prodotto[] pp)
@@ -89,14 +75,26 @@ namespace form3_guida
                 }
             }
         }
+        //casella inserimento nome da cercare
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        //casella inserimento nome prodotto da sostituire
+        private void nuovonome_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        //casella inserimento prezzo prodotto da sostituire
+        private void nuovoprezzo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        //bottone per far aggiornare il nome e il prezzo
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Modifica(p);
+            visualizza(p);
         }
 
         
