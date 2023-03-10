@@ -44,7 +44,7 @@ namespace form3_guida
         }
         public string prodString(prodotto p)
         {
-            return "Nome: " + p.nome + " prezzo: " + p.prezzo.ToString();
+            return "Nome: " + p.nome + "  ----  Prezzo: " + p.prezzo.ToString();
         }
         //bottone per far inserire i prodotti e prezzi
         private void button1_Click(object sender, EventArgs e)
@@ -97,6 +97,22 @@ namespace form3_guida
             visualizza(p);
         }
 
-        
+        //CALCOLO PREZZO DEI PRODOTTI
+        public void Somma(prodotto[] pp)
+        {
+            float somma = 0;
+            for (int i = 0; i < dim; i++)
+            {
+                somma = somma + p[i].prezzo;
+            }
+            listView1.Items.Add("---------------");
+            listView1.Items.Add("Il prezzo totale dei prodotti è: "+ somma);
+        }
+
+        //bottone per far stampare la somma 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Somma(p);
+        }
     }
 }
